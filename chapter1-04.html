@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <div id="content">
+
+  </div>
+</body>
+<script>
+  function aonclick(x) {
+    alert(x);
+  }
+  let content = document.getElementById("content");
+  for (let i = 0; i < 10; i++) {
+    let y = i + 1;
+    let a = document.createElement("a");
+    let br = document.createElement("br");
+    a.href = "#";
+    let num = document.createTextNode(i + 1);
+    a.appendChild(num);
+    a.setAttribute('onclick', 'aonclick(' + y + ')');
+    content.appendChild(a);
+    content.appendChild(br)
+  }
+</script>
+
+</html>
